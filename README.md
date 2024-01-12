@@ -525,6 +525,25 @@ To conduct thorough testing for the `londonProducer.py` script, follow the steps
 This testing process ensures the effective functioning of the AWS infrastructure, including proper scaling based on message counts and successful message processing by instances running the `consumer.py` script.
 
 
+![test pics](Screenshots/test1.png)
+![test pics](Screenshots/test2.png)
+![test pics](Screenshots/test3.png)
+![test pics](Screenshots/test4.png)
+![test pics](Screenshots/test5.png)
+![test pics](Screenshots/test6.png)
+![test pics](Screenshots/test7.png)
+![test pics](Screenshots/test8.png)
+![test pics](Screenshots/test9.png)
+![test pics](Screenshots/test10.png)
+![test pics](Screenshots/test11.png)
+![test pics](Screenshots/test12.png)
+![test pics](Screenshots/test13.png)
+![test pics](Screenshots/test14.png)
+![test pics](Screenshots/test15.png)
+![test pics](Screenshots/test16.png)
+![test pics](Screenshots/test17.png)
+
+
 
 
 
