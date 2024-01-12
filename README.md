@@ -15,6 +15,8 @@ This exercise involves setting up an **AWS environment** where **EC2 instances s
 # Prerequisites:
 - A clean AWS CLI environment where you have already set your Access Keys.
 
+- Python, Pip and boto 3 installed on your Desktop ; without them, you're not able to start the producer script.
+
 - IAM Role with the necessary SQS access policies for sending and receiving messages for EC2 instances.
 
 - A standard Amazon SQS Queue.
