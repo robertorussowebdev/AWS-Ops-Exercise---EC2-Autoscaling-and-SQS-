@@ -51,6 +51,9 @@ If the prompt returns your access key credentials, it means you have already set
 
 Let's continue with the exercise.
 
+**p.s Python, Pip and boto 3 installed on your Desktop ; without them, you're not able to start the producer script.**
+
+
 # Step 2: Create a Standard SQS Queue
 
 Now, let's create your Amazon SQS Queue.
