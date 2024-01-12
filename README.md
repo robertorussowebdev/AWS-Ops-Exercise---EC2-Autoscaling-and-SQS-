@@ -32,10 +32,17 @@ This exercise involves setting up an **AWS environment** where **EC2 instances s
 - Two CloudWatch Alarms for Scale Out and Scale In processes.
 
 # Step 1: Check for your AWS CLI
-Ensure that you have the AWS CLI installed on your desktop.
+Make sure you have a **Command Line Interface (CLI)** installed on your **desktop**; 
 
-This is a mandatory requirement as you need to launch the **producer script from your desktop**, requiring access to the AWS environment.
+it is a mandatory requirement to launch the **producer script from the desktop** and gain access to the AWS environment.
 
+- To verify this, open your **Command Prompt** and enter:
+
+  ```
+  aws --version
+  aws configure get aws_access_key_id
+  aws configure get aws_secret_access_key
+  ```
 
 
 
