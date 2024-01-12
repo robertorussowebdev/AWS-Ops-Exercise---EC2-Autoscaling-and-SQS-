@@ -45,6 +45,10 @@ it is a mandatory requirement to launch the **producer script from the desktop**
   ```
 ![cmd AWS CLI check ](Screenshots/cmdcheck.png)
 
+If the prompt returns your access key credentials, it means you have already set them, and therefore, you have access to AWS resources.
+
+Let's continue with the exercise.
+
   
 
 
