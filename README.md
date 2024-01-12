@@ -438,9 +438,9 @@ In this step, we will configure the actions to be taken when the alarm state is 
 
 6. Click **Create**.
 
-![Dynamic Scaling Policies](Screenshots/pol1.png)
+![Dynamic Scaling Policies](Screenshots/min2.png)
 ![Dynamic Scaling Policies](Screenshots/pol2.png)
-![Dynamic Scaling Policies](Screenshots/pol3.png)
+![Dynamic Scaling Policies](Screenshots/min1.png)
 
 
 # Optional requirements
