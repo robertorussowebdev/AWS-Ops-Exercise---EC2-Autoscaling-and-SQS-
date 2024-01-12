@@ -508,7 +508,7 @@ To conduct thorough testing for the `parisProducer.py` script, follow the steps 
 
 4. Execute the script multiple times to exceed the alarm threshold.
 
-5. Open multiple Command Prompt windows to monitor CloudWatch (for alarm states), SQS (for message delivery), and Auto Scaling (for instance logs and processes).
+5. Open multiple browser windows to monitor CloudWatch (for alarm states), SQS (for message delivery), and Auto Scaling (for instance logs and processes).
 
 6. Expect an initial alarm on the Scale In policy due to the threshold set to ≤ 1 message. This is normal as there are initially 0 messages in the SQS queue.
 
