@@ -325,3 +325,45 @@ In this step, we will create two alarms:
 
 
 
+# Step 9: Create the Launch Template
+
+1. On **EC2**, navigate to **Launch Templates** > **Create Launch Template**.
+
+2. Provide a name for the **Launch Template Name**. Under **Application and OS**, select **Amazon Linux 2023 AMI**.
+
+3. For **Instance Type**, choose **t2.micro**. For **Key Pair**, select the Key Pair created in the previous step (paris).
+
+4. Under **Network Settings**, don't include a subnet in the launch template. Select the **Exercise-SG** created in the previous step for the Security Group. In **Advanced network settings**, add a network interface and leave it at the default.
+
+5. Leave Storage and Resource tags as default.
+
+6. For **Advanced details**, under **IAM instance profile**, select the **IAM Role** created in the previous step.
+
+7. Under **User Data**, copy and paste the following Bash code. Ensure to edit the **wget link with the URL of your Python consumer script object** and update the **last prompt** where you invoke the **script with your filename.**
+
+```bash
+#!/bin/bash
+aws configure set aws_access_key_id <YOUR_ACCESS_KEY_ID>
+aws configure set aws_secret_access_key <YOUR_SECRET_ACCESS_KEY>
+aws configure set default.region <YOUR_REGION>
+aws configure set default.output json
+sudo yum update -y
+sudo yum install python3 -y
+sudo yum install python3-pip -y
+pip3 install boto3
+wget <YOUR_BUCKET_OBJECT_URL_SELECT_THE_CONSUMERSCRIPT_py>
+python3 <consumerfilename.py>
+
+```
+
+![Launch Template Settings](temp1.png)
+![Launch Template Settings](temp2.png)
+![Launch Template Settings](temp3.png)
+![Launch Template Settings](temp4.png)
+![Launch Template Settings](temp5.png)
+
+
+
+
+
+
