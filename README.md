@@ -364,6 +364,33 @@ python3 <consumerfilename.py>
 
 
 
+# Step 10: Create the Auto Scaling Group
+
+
+1. Go to **EC2 > Auto Scaling Group > Create Auto Scaling Group**.
+
+2. Provide a name for the Auto Scaling group (e.g., MyNewASG).
+
+3. **Select the Launch Template** we created in the previous step and click **Next**.
+
+4. Leave the **Default VPC** selected and choose one availability zone from your choices.
+
+5. On **Configure Advanced Options**, leave all settings as **Default** and click **Next**.
+
+6. On **Configure group size and scaling:**
+   - Set Desired Capacity to **0**
+   - Set Minimum Capacity to **0**
+   - Set Maximum Capacity to **4**
+
+7. On **Automatic Scaling**, select **No Scaling Policies**, and leave other settings to their default options. **We're going to set them after on dynamic scaling policies.**
+
+8. Click on **Next** for **Notification**, and again click on **Next** for **Tags**.
+
+9. **Review** the configuration.
+
+10. Click **Create Configuration**.
+
+
 
 
 
