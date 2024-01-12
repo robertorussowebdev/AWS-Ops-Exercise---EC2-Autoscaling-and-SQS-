@@ -131,7 +131,19 @@ As you can see, action are allowed so it's all OK.
 4. Click on **Create Key Pair**.
 5. Download the Key and save it to your PC.
 
-![IAM Policy Simulation](Screenshots/key3.png)
+![Key pairs](Screenshots/key3.png)
+
+# Step 5: Create a Security Group
+
+1. **We are going to create a Security Group for SSH.**
+2. Navigate to **EC2 > Security Groups > Create a new security group**, and set the following values:
+    - Name: `Exercise-SG`.
+    - Add an Inbound rule to allow **SSH (TCP 22)** traffic from **My IP**.
+3. Click **Create security group**.
+
+*Note: Leave the Outbound rule with the default value.*
+
+![SG](Screenshots/sg1.png)
 
 
 
