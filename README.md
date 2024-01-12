@@ -283,3 +283,21 @@ p.s. On a clipboard, save the  object URL you uploaded before, it will be useful
 
 
 
+# Step 8: Create CloudWatch Alarms
+
+In this step, we will create two alarms:
+
+1. **Scale Out Alarm**: This alarm triggers the Scale Out process, increasing our instances by +4.
+
+2. **Scale In Alarm**: This alarm triggers the Scale In process, decreasing our instances by -4.
+
+## Scale OUT alarm creation
+1. **Go to CloudWatch** and click on **Alarms**.
+2. When on **Alarms**, click **Create Alarm**. Select Metric.
+3. On **Select Metric**, click **SQS** > **Queue Metrics** > select **ApproximateNumberOfMessagesVisible** > click on the button **Select Metric**.
+4. Change **Statistic** from *Average* to **Sum**. Set **Period** to **1 Minute**.
+   - On **Conditions**, select Threshold Type: **Static**.
+   - Whenever ApproximateNumberOfMessagesVisible is **GreaterOrEqual (≥ threshold)** than **1**.
+   - On **Datapoints**, change **Treat data as missing** to **Treat data as good**.
+5. Click on **Next**, **Remove Notification** (leave as default).
+6. Give an **Alarm Name** (e.g., **ScaleOut**), then click **Create alarm**.
