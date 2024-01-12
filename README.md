@@ -57,13 +57,13 @@ Now, let's create your Amazon SQS Queue.
 - In the SQS dashboard, navigate to **Create queue**.
 - Enter the **Name** as 'MyQueue,' leave the other settings as defaults, and then click on **Create queue**. p.s. I setted MyQueue,but you can use every name you want for all the exercise.
 
-![cmd AWS CLI check ](Screenshots/sqs2.png)
+![SQS Name ](Screenshots/sqs2.png)
 
 Set your SQS Queue Name and then leave all settings as defaults.
 
 
 
-![cmd AWS CLI check ](Screenshots/sqsfinal.png)
+![SQS Queue Check  ](Screenshots/sqsfinal.png)
 
 
 Final result → You created your SQS Queue
@@ -98,6 +98,23 @@ Final result → You created your SQS Queue
 7. Click **Next** and then **Save Changes**.
 8. Add a **Policy Name**.
 9. You have successfully created your IAM Role and attached the SQS policies!
+
+
+![IAM Role creation ](Screenshots/iam3.png)
+Select EC2 under Use Case
+
+![IAM Role creation ](Screenshots/iam5.png)
+Create a Name for your Role
+![IAM Role creation ](Screenshots/iam6.png)
+
+![IAM Role creation ](Screenshots/iam7.png)
+
+![IAM Role creation ](Screenshots/iampolicy.png)
+
+
+
+
+
 
 
 
