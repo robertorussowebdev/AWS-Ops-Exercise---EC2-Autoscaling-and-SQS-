@@ -146,9 +146,82 @@ As you can see, action are allowed so it's all OK.
 ![SG](Screenshots/sg1.png)
 
 
+# **Creating Python Scripts (parisProducer.py & parisConsumer.py)**
+
+In this step of the exercise, I will provide you with the source code for creating the producer and consumer scripts.
+
+The producer script is responsible for **sending messages to the SQS queue**, while the consumer script will **scan the queue and delete messages**, poll messages from the SQS queue, process them, and then wait for one minute before polling for messages again.
+
+*Why this?* Because we need to set the message count to 0 for 0 instances.
+
+### **parisProducer.py**
+
+*(Pay attention to QueueName and Region; set them according to your configuration. In my case, I’ll provide mine, but if you want to replicate, I’ll also provide the source code in another folder with empty placeholders, and you can modify it when you want :D)*
+```python
+import boto3
+import json
+
+
+region = 'eu-west-3' # Replace 'REGION'  with your AWS region 
+queue_name = 'MyQueue' # Replace 'QUEUE_NAME' with your  SQS queue name
+
+
+sqs = boto3.client('sqs', region_name=region) # Create an SQS client
+
+# JSON message content -> I'll use the exercise example
+message_payload = {
+    "vehicleId": "VH2001",
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2020,
+    "color": "Blue",
+    "mileage": 15000
+}
+
+# Send message to your SQS queue
+queue_url = sqs.get_queue_url(QueueName=queue_name)['QueueUrl']
+response = sqs.send_message(
+    QueueUrl=queue_url,
+    MessageBody=json.dumps(message_payload)
+)
+# Display the correct message sending with his MessageId connected
+print(f"Message sent. MessageId: {response['MessageId']}")
+```
+
+
+### **parisConsumer.py**
+```python
+import boto3
+import json
+import time
+
+region = 'eu-west-3' # Replace 'REGION'  with your AWS region 
+queue_name = 'MyQueue' # Replace 'QUEUE_NAME' with your  SQS queue name
 
 
 
+sqs = boto3.resource('sqs', region_name=region) # Create an SQS client
+queue = sqs.get_queue_by_name(QueueName=queue_name)
+
+# While loop for process, display, delete and wait messages
+
+while True:
+    messages = queue.receive_messages(MaxNumberOfMessages=1, WaitTimeSeconds=20)
+
+    for message in messages:
+        # Process the message content and display it
+        content = json.loads(message.body)
+        print(f"Processing message: {content}")
+
+        # Delete the message from the queue after processing it
+        message.delete()
+
+    #  Adding a wait for one minute before polling for messages again
+    time.sleep(60)
+```
+
+
+Save them on your PC, but now let’s upload to a new public bucket the parisConsumer.py one.
 
 
 
