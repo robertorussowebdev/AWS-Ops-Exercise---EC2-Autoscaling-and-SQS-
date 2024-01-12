@@ -444,6 +444,36 @@ In this step, we will configure the actions to be taken when the alarm state is 
 ![Dynamic Scaling Policies](Screenshots/pol3.png)
 
 
+# Optional requirements
+
+## Adding a CloudWatch dashboard to monitor SQS and EC2 metrics 
+**Simple Tutorial Guide: Adding EC2 Instance Metrics to CloudWatch Dashboard**
+
+1. **Access AWS Cloudwatch**
+   - Navigate to the CloudWatch service.
+
+2. **Choose Metrics**
+   - In the left navigation pane, click on "Dashboard."
+
+3. **Create a New Dashboard**
+   - Click on "Create dashboard," give it a name, and set the time zone.
+
+4. **Add Widget**
+   - Click "Add widget," choose the type (e.g., Line, Number), and select the metric you want to display.
+     
+5. **Choose Instance Metrics**
+   - Select "EC2"/"SQS" and pick the specific Auto Scaling Group / SQS Queue you're interested in.
+
+6. **Select Metric of Interest**
+   - Look for the metric of interest, such as "CPUUtilization" or "NetworkIn".
+
+7. **Configure Widget**
+   - Configure the widget settings, such as title and Y-axis settings.
+
+8. **Save Dashboard**
+    - Click "Create widget" and then "Save dashboard."
+
+
 
 
 
