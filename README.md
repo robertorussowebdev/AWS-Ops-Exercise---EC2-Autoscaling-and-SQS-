@@ -480,9 +480,9 @@ In this step, we will configure the actions to be taken when the alarm state is 
 
 
 # Report and Test
-# Testing Procedure for `londonProducer.py` Script
+# Testing Procedure for `parisProducer.py` Script
 
-To conduct thorough testing for the `londonProducer.py` script, follow the steps below in your Command Prompt:
+To conduct thorough testing for the `parisProducer.py` script, follow the steps below in your Command Prompt:
 
 1. Navigate to the desktop directory using the `cd` command in the Command Prompt:
 
@@ -490,16 +490,16 @@ To conduct thorough testing for the `londonProducer.py` script, follow the steps
     cd desktop
     ```
 
-2. Move to the 'london' directory containing the `londonProducer.py` script:
+2. Move to the 'paris' directory containing the `parisProducer.py` script:
 
     ```bash
-    cd london
+    cd paris
     ```
 
 3. Start the script by entering the following command:
 
     ```bash
-    python londonProducer.py
+    python parisProducer.py
     ```
 
 4. Execute the script multiple times to exceed the alarm threshold.
@@ -510,9 +510,9 @@ To conduct thorough testing for the `londonProducer.py` script, follow the steps
 
 7. As the script starts scanning and detects ≥ 1 message in the SQS queue, the Scale In alarm will transition to an OK state, triggering a Scale Out policy to increase instances.
 
-8. Track the number of available messages in the SQS queue to ensure correct message deletion. A decrease in available messages indicates that the EC2 bootstrap script is functioning properly, with successful installation and download of the `consumer.py` script.
+8. Track the number of available messages in the SQS queue to ensure correct message deletion. A decrease in available messages indicates that the EC2 bootstrap script is functioning properly, with successful installation and download of the `parisConsumer.py` script.
 
-9. The `consumer.py` script will poll messages every 60 seconds, processing and deleting them.
+9. The `parisConsumer.py` script will poll messages every 60 seconds, processing and deleting them.
 
 10. Monitor CloudWatch alarms to observe the transition of the Scale Out policy from OK to Alarm state as it exceeds the threshold, prompting an increase in instances.
 
