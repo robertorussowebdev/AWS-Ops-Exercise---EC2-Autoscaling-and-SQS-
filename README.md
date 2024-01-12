@@ -390,6 +390,24 @@ python3 <consumerfilename.py>
 
 10. Click **Create Configuration**.
 
+You created the Auto Scaling Group.
+
+![Auto Scaling Group creation](Screenshots/asg1.png)
+![Auto Scaling Group creation](Screenshots/asg2.png)
+![Auto Scaling Group creation](Screenshots/asg3.png)
+![Auto Scaling Group creation](Screenshots/asg4.png)
+![Auto Scaling Group creation](Screenshots/asg5.png)
+![Auto Scaling Group creation](Screenshots/asg6.png)
+![Auto Scaling Group creation](Screenshots/asg8.png)
+![Auto Scaling Group creation](Screenshots/asg7.png)
+
+
+
+
+
+
+
+
 
 
 
