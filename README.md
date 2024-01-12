@@ -479,6 +479,53 @@ In this step, we will configure the actions to be taken when the alarm state is 
 ![dashboard settings](Screenshots/dash4.png)
 
 
+# Report and Test
+# Testing Procedure for `londonProducer.py` Script
+
+To conduct thorough testing for the `londonProducer.py` script, follow the steps below in your Command Prompt:
+
+1. Navigate to the desktop directory using the `cd` command in the Command Prompt:
+
+    ```bash
+    cd desktop
+    ```
+
+2. Move to the 'london' directory containing the `londonProducer.py` script:
+
+    ```bash
+    cd london
+    ```
+
+3. Start the script by entering the following command:
+
+    ```bash
+    python londonProducer.py
+    ```
+
+4. Execute the script multiple times to exceed the alarm threshold.
+
+5. Open multiple Command Prompt windows to monitor CloudWatch (for alarm states), SQS (for message delivery), and Auto Scaling (for instance logs and processes).
+
+6. Expect an initial alarm on the Scale In policy due to the threshold set to ≤ 1 message. This is normal as there are initially 0 messages in the SQS queue.
+
+7. As the script starts scanning and detects ≥ 1 message in the SQS queue, the Scale In alarm will transition to an OK state, triggering a Scale Out policy to increase instances.
+
+8. Track the number of available messages in the SQS queue to ensure correct message deletion. A decrease in available messages indicates that the EC2 bootstrap script is functioning properly, with successful installation and download of the `consumer.py` script.
+
+9. The `consumer.py` script will poll messages every 60 seconds, processing and deleting them.
+
+10. Monitor CloudWatch alarms to observe the transition of the Scale Out policy from OK to Alarm state as it exceeds the threshold, prompting an increase in instances.
+
+11. The Scale In policy will return to OK status when it exceeds its threshold, preventing the removal of instances. This is because the number of SQS messages sent (4) is greater than the set threshold of 1.
+
+12. Once the SQS queue reaches 0 messages, the Scale Out policy will return to OK status, ceasing the increase of instances. Simultaneously, the Scale In policy will trigger an alert (0 ≤ 1), initiating the removal of instances.
+
+## Conclusion
+
+This testing process ensures the effective functioning of the AWS infrastructure, including proper scaling based on message counts and successful message processing by instances running the `consumer.py` script.
+
+
+
 
 
 
