@@ -307,3 +307,16 @@ In this step, we will create two alarms:
 ![Scale Out Alarm creation](Screenshots/sout3.png)
 
 
+## Scale IN alarm creation
+1. **Go to CloudWatch** and click on **Alarms**.
+2. When on **Alarms**, click **Create Alarm**. Select Metric.
+3. On **Select Metric**, click **SQS** > **Queue Metrics** > select **ApproximateNumberOfMessagesVisible** for **MyQueue** > click on the button **Select Metric**.
+4. Change **Statistic** from *Average* to **Sum**. Set **Period** to **1 Minute**.
+   - On **Conditions**, select Threshold Type: **Static**.
+   - Whenever ApproximateNumberOfMessagesVisible is **LowerOrEqual (≤  threshold)** than **1**.
+   - On **Datapoints**, change **Treat data as missing** to **Treat data as good**.
+5. Click on **Next**, **Remove Notification** (leave as default).
+6. Give an **Alarm Name** (e.g., **ScaleIn**), then click **Create alarm**.
+
+
+
