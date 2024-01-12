@@ -43,7 +43,7 @@ it is a mandatory requirement to launch the **producer script from the desktop**
   aws configure get aws_access_key_id
   aws configure get aws_secret_access_key
   ```
-![cmd AWS CLI check ](Screenshots/Screenshot 2024-01-12 132539.png)
+![cmd AWS CLI check ](Screenshots/cmdcheck.png)
 
   
 
