@@ -319,8 +319,8 @@ In this step, we will create two alarms:
 6. Give an **Alarm Name** (e.g., **ScaleIn**), then click **Create alarm**.
 
 
-![Scale In Alarm creation](Screenshots/sin1.png)
-![Scale In Alarm creation](Screenshots/sin2.png)
+![Scale In Alarm creation](Screenshots/aia1.png)
+![Scale In Alarm creation](Screenshots/aia2.png)
 
 
 
