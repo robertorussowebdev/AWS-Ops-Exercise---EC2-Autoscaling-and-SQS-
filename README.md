@@ -123,6 +123,16 @@ Select your Role, service SQS and the actions said before.
 ![IAM Policy Simulation](Screenshots/simul2.png)
 As you can see, action are allowed so it's all OK.
 
+# Step 4: Create a key pair
+
+1. Navigate to **EC2 > Key Pairs** (under Network & Security).
+2. Click on **Create key pair**.
+3. Enter **Name** as `paris`. (In your setup, give it any name you prefer)
+4. Click on **Create Key Pair**.
+5. Download the Key and save it to your PC.
+
+![IAM Policy Simulation](Screenshots/key3.png)
+
 
 
 
