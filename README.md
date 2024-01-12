@@ -356,11 +356,11 @@ python3 <consumerfilename.py>
 
 ```
 
-![Launch Template Settings](temp1.png)
-![Launch Template Settings](temp2.png)
-![Launch Template Settings](temp3.png)
-![Launch Template Settings](temp4.png)
-![Launch Template Settings](temp5.png)
+![Launch Template Settings](Screenshots/temp1.png)
+![Launch Template Settings](Screenshots/temp2.png)
+![Launch Template Settings](Screenshots/temp3.png)
+![Launch Template Settings](Screenshots/temp4.png)
+![Launch Template Settings](Screenshots/temp5.png)
 
 
 
