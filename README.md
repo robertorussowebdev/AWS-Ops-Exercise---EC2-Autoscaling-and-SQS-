@@ -548,6 +548,15 @@ This testing process ensures the effective functioning of the AWS infrastructure
 ![test pics](Screenshots/test17.png)
 
 
+# Conclusion
+
+As you can observe, the environment functions as required in the assignment. 
+I have endeavored to create a highly elastic solution utilizing the AWS services specified in the delivery requirements.
+Attached herewith is the Cloudwatch dashboard for my environment in the `eu-west-3` region (Paris) , as required on Optional and Bonus requirements. ->
+https://cloudwatch.amazonaws.com/dashboard.html?dashboard=ParisDashboard&context=eyJSIjoidXMtZWFzdC0xIiwiRCI6ImN3LWRiLTczNDg3Mzg3MDU0NSIsIlUiOiJ1cy1lYXN0LTFfMUNPWTBNMFZqIiwiQyI6IjNkZXNmamtiNGkxOWlyZjhjdDZkcTllNjM1IiwiSSI6InVzLWVhc3QtMTowNjA2YzYxYi01MjRmLTRmNTEtYWFhOC1hMDZhZTNlNmM2MGYiLCJNIjoiUHVibGljIn0=
+
+The program executes correctly despite the initial state of the scaling being in alarm, and it scales the instances appropriately.**Within my Git repository, you will find the `log.md` file**, which includes logs from a successful trial of the entire exercise. 
+This file encompasses CloudWatch logs pertaining to alarms (indicating alarm states and triggering of dynamic scaling policies) and logs of Auto Scaling Group activities.
 
 
 
