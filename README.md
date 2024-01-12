@@ -69,3 +69,17 @@ Set your SQS Queue Name and then leave all settings as defaults.
 Final result → You created your SQS Queue
 
 
+# Step 3: Create a IAM Role for EC2 instances
+
+1. Navigate to **IAM > Roles** and click on **Create role**.
+2. Select **EC2** under use case and click **Next**.
+3. Leave all options at their defaults and click **Next**.
+4. Provide a Name for your Role and then click **Create Role**.
+5. Once the Role is created, go to **Role > Permissions > Add Permissions > Create Inline Policy**.
+6. In the Create Inline Policy, choose JSON, and replace the existing JSON policy with the following.
+7. Click **Next** and then **Save Changes**.
+8. Add a **Policy Name**.
+9. You have successfully created your IAM Role and attached the SQS policy!
+
+
+
