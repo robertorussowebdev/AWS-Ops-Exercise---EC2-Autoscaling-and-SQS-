@@ -403,6 +403,46 @@ You created the Auto Scaling Group.
 
 
 
+# Step 10: Set Dynamic Scaling Policies
+
+In this step, we will configure the actions to be taken when the alarm state is triggered. Specifically, we will define the actions for scaling out (adding instances) and scaling in (removing instances).
+
+## Scale Out Policy
+#### Configure Dynamic Scaling Policy for Auto Scaling Group
+
+1. On **Autoscaling Groups**, **select your Auto Scaling Group (ASG)**, then click on **Automatic Scaling**.
+
+2. Click on **Create Dynamic Scaling Policy**. Choose **Policy Type** and select **Simple Scaling**.
+
+3. Create a **Scaling Policy Name**, and for **CloudWatch Alarm**, select **ScaleOut**.
+
+4. Under **Take the action**, select **Add**. Type **4** in the field, and select **Capacity Units**.
+
+5. For the **Wait time after action**, type **60** seconds before allowing another scaling activity.
+
+6. Click **Create**.
+
+
+
+## Scale In Policy
+#### Configure Dynamic Scaling Policy for Auto Scaling Group
+
+1. On **Autoscaling Groups**, **select your Auto Scaling Group (ASG)**, then click on **Automatic Scaling**.
+
+2. Click on **Create Dynamic Scaling Policy**. Choose **Policy Type** and select **Simple Scaling**.
+
+3. Create a **Scaling Policy Name**, and for **CloudWatch Alarm**, select **ScaleIn**.
+
+4. Under **Take the action**, select **Remove**. Type **4** in the field, and select **Capacity Units**.
+
+5. For the **Wait time after action**, type **60** seconds before allowing another scaling activity.
+
+6. Click **Create**.
+
+![Dynamic Scaling Policies](Screenshots/pol1.png)
+![Dynamic Scaling Policies](Screenshots/pol2.png)
+![Dynamic Scaling Policies](Screenshots/pol3.png)
+
 
 
 
