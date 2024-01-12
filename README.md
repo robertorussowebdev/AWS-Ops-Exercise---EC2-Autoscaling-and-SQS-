@@ -473,6 +473,12 @@ In this step, we will configure the actions to be taken when the alarm state is 
 8. **Save Dashboard**
     - Click "Create widget" and then "Save dashboard."
 
+![dashboard settings](Screenshots/dash1.png)
+![dashboard settings](Screenshots/dash2.png)
+![dashboard settings](Screenshots/dash3.png)
+![dashboard settings](Screenshots/dash4.png)
+
+
 
 
 
