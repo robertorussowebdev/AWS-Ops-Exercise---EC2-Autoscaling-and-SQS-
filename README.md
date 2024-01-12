@@ -146,7 +146,7 @@ As you can see, action are allowed so it's all OK.
 ![SG](Screenshots/sg1.png)
 
 
-# **Creating Python Scripts (parisProducer.py & parisConsumer.py)**
+# **Step 6: Creating Python Scripts (parisProducer.py & parisConsumer.py)**
 
 In this step of the exercise, I will provide you with the source code for creating the producer and consumer scripts.
 
@@ -223,6 +223,61 @@ while True:
 
 Save them on your PC, but now let’s upload to a new public bucket the parisConsumer.py one.
 
+
+# Step 7: Create a public S3 Bucket
+
+### 1: Navigate to S3 on AWS Console
+
+Navigate to the AWS Console and find the **S3 service.**
+
+### 2: Create a New S3 Bucket
+
+1. Click on **Create bucket**.
+2. Provide a unique and meaningful name for your bucket.
+3. Choose the AWS region for your bucket.
+4. Click **Next** until you reach the **Set permissions** page.
+
+### 3: Set Permissions for a Public Bucket
+
+1. On the **Set permissions** page, under **Manage public permissions**, uncheck the **Block all public access** option.
+2. In the dialog box that appears, acknowledge the risks and click **Confirm**.
+3. Click **Next** until you reach the **Review** page.
+
+### 4: Review and Create the Bucket
+
+1. Review your configuration.
+2. Click **Create bucket**.
+
+### 5: Upload Files to the Public Bucket
+
+1. Once the bucket is created, navigate into the bucket.
+2. Click on **Upload** to add files to your public S3 bucket.
+
+### 6: Add GetObject Policy to the bucket
+1. Go to your bucket and navigate in **Permissions**
+2. Navigate to **Bucket Policy** and add this policy:
+``` json
+{
+"Version": "2012-10-17",
+"Id": "Policy1705013110994",
+"Statement": [
+{
+"Sid": "Stmt1705013109716",
+"Effect": "Allow",
+"Principal": "",
+"Action": "s3:GetObject",
+"Resource": "arn:aws:s3:::parisbucket01/*"
+}
+]
+}
+```
+Pay attention to "Resorce", add yout bucket ARN correctly and add before the closing " -> /*  
+### 7: Accessing Public Files
+
+1. Select a file in your bucket.
+2. In the details pane, click on the file URL to access it publicly.
+
+Congratulations! You have successfully created a public S3 bucket and uploaded files.
 
 
 
