@@ -279,5 +279,7 @@ Pay attention to "Resorce", add yout bucket ARN correctly and add before the clo
 
 Congratulations! You have successfully created a public S3 bucket and uploaded files.
 
+p.s. On a clipboard, save the  object URL you uploaded before, it will be useful when we're going to set the Launch Template.
+
 
 
