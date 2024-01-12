@@ -104,13 +104,13 @@ Final result → You created your SQS Queue
 Select EC2 under Use Case
 
 ![IAM Role creation ](Screenshots/iam5.png)
-Create a Name for your Role
+Create a Name for your Role and leave all settings as defaults.
 ![IAM Role creation ](Screenshots/iam6.png)
-
+Once the Role is created, go to **Role > Permissions > Add Permissions > Create Inline Policy**.
 ![IAM Role creation ](Screenshots/iam7.png)
 
 ![IAM Role creation ](Screenshots/iampolicy.png)
-
+In the Create Inline Policy, choose JSON, and replace the existing JSON policy with the following and then save, you have done all here.
 
 
 
