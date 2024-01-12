@@ -58,6 +58,8 @@ Now, let's create your Amazon SQS Queue.
 - Enter the **Name** as 'MyQueue,' leave the other settings as defaults, and then click on **Create queue**. p.s. I setted MyQueue,but you can use every name you want for all the exercise.
 
 ![cmd AWS CLI check ](Screenshots/sqs2.png)
+
+
 ![cmd AWS CLI check ](Screenshots/sqsfinal.png)
 
 
