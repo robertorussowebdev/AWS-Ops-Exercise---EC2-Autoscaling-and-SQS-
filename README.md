@@ -49,8 +49,16 @@ If the prompt returns your access key credentials, it means you have already set
 
 Let's continue with the exercise.
 
-  
+# Step 2: Create a Standard SQS Queue
 
+Now, let's create your Amazon SQS Queue.
+
+- Open your AWS Console Home and use the search bar to find '**SQS**.' Click on the 'Simple Queue Service' result.
+- In the SQS dashboard, navigate to **Create queue**.
+- Enter the **Name** as 'MyQueue,' leave the other settings as defaults, and then click on **Create queue**. p.s. I setted MyQueue,but you can use every name you want for all the exercise.
+
+![cmd AWS CLI check ](Screenshots/sqs2.png)
+![cmd AWS CLI check ](Screenshots/sqsfinal.png)
 
 
 
