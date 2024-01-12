@@ -77,9 +77,27 @@ Final result → You created your SQS Queue
 4. Provide a Name for your Role and then click **Create Role**.
 5. Once the Role is created, go to **Role > Permissions > Add Permissions > Create Inline Policy**.
 6. In the Create Inline Policy, choose JSON, and replace the existing JSON policy with the following.
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1704991352140",
+      "Action": [
+        "sqs:DeleteMessage",
+        "sqs:ReceiveMessage",
+        "sqs:SendMessage"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
+```
+   
 7. Click **Next** and then **Save Changes**.
 8. Add a **Policy Name**.
-9. You have successfully created your IAM Role and attached the SQS policy!
+9. You have successfully created your IAM Role and attached the SQS policies!
 
 
 
