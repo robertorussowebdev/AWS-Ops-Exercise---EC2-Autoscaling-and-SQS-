@@ -112,6 +112,19 @@ Once the Role is created, go to **Role > Permissions > Add Permissions > Create 
 ![IAM Role creation ](Screenshots/iampolicy.png)
 In the Create Inline Policy, choose JSON, and replace the existing JSON policy with the following and then save, you have done all here.
 
+# Extra step: Simulate the policy
+An extra step, but it's a **best practice** to do so, is to **simulate the policy**.
+
+For this reason, let's go to the **Amazon Policy Simulator** and test the role. Filter by the SQS service, and in the actions, select **DeleteMessage, SendMessage, ReceiveMessage**.
+
+![IAM Policy Simulation](Screenshots/simul.png)
+Select your Role, service SQS and the actions said before.
+
+![IAM Policy Simulation](Screenshots/simul2.png)
+As you can see, action are allowed so it's all OK.
+
+
+
 
 
 
