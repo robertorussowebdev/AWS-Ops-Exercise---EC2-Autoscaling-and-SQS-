@@ -33,6 +33,10 @@ This exercise involves setting up an **AWS environment** where **EC2 instances s
 
 - Two CloudWatch Alarms for Scale Out and Scale In processes.
 
+
+# Architecture 
+![Architecture](Screenshots/architecture.jpg)
+
 # Step 1: Check for your AWS CLI
 Make sure you have a **Command Line Interface (CLI)** installed on your **desktop**; 
 
