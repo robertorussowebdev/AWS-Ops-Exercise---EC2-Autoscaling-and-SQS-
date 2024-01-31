@@ -35,7 +35,7 @@ This exercise involves setting up an **AWS environment** where **EC2 instances s
 
 
 # Architecture 
-![Architecture](Screenshots/architecture.jpg)
+![Architecture](Screenshots/architecture.jpeg)
 
 # Step 1: Check for your AWS CLI
 Make sure you have a **Command Line Interface (CLI)** installed on your **desktop**; 
